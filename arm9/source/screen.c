@@ -42,12 +42,12 @@ struct fb fbs[2] =
     {
         .top_left  = (u8 *)0x18300000,
         .top_right = (u8 *)0x18300000,
-        .bottom    = (u8 *)0x18346500,
+        .bottom    = (u8 *)0x18300000,
     },
     {
         .top_left  = (u8 *)0x18400000,
         .top_right = (u8 *)0x18400000,
-        .bottom    = (u8 *)0x18446500,
+        .bottom    = (u8 *)0x18400000,
     },
 };
 
