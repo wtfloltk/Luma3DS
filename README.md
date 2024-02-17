@@ -1,3 +1,7 @@
+ATTEMPT AT A GBMACRO lumacfw
+
+
+
 # Luma3DS
 *Noob-proof (N)3DS "Custom Firmware"*
 
