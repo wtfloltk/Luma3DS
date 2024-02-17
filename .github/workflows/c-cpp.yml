@@ -20,3 +20,10 @@ jobs:
         pip install -U git+https://github.com/TuxSH/firmtool.git
         chmod +x makerom
         make
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4.3.1
+      with:
+        # Artifact name
+          name: boot.firm
+          # A file, directory or wildcard pattern that describes what to upload
+          path: boot.firm
