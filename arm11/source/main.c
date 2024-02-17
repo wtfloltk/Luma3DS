@@ -112,8 +112,8 @@ static void initScreens(u32 brightnessLevel, struct fb *fbs)
     *(vu32 *)0x1040055C = 0x00f00140;
     *(vu32 *)0x10400560 = 0x01c100d1;
     *(vu32 *)0x10400564 = 0x01920052;
-    *(vu32 *)0x10400568 = (u32)fbs[0].bottom;
-    *(vu32 *)0x1040056C = (u32)fbs[1].bottom;
+    *(vu32 *)0x10400568 = (u32)fbs[0].top_left;
+    *(vu32 *)0x1040056C = (u32)fbs[1].top_right;
     *(vu32 *)0x10400570 = 0x80301;
     *(vu32 *)0x10400574 = 0x00010501;
     *(vu32 *)0x10400578 = 0;
