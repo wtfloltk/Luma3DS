@@ -39,17 +39,17 @@ typedef volatile u16 vu16;
 typedef volatile u32 vu32;
 typedef volatile u64 vu64;
 
-#define SCREEN_TOP_WIDTH     400
-#define SCREEN_BOTTOM_WIDTH  320
-#define SCREEN_HEIGHT        240
+#define SCREEN_TOP_WIDTH     1600
+#define SCREEN_BOTTOM_WIDTH  1280
+#define SCREEN_HEIGHT        480
 #define SCREEN_TOP_FBSIZE    (3 * SCREEN_TOP_WIDTH * SCREEN_HEIGHT)
 #define SCREEN_BOTTOM_FBSIZE (3 * SCREEN_BOTTOM_WIDTH * SCREEN_HEIGHT)
 #define ARM11_PARAMETERS_ADDRESS  0x1FFFF000
 
 struct fb {
-     u8 *top_left;
-     u8 *top_right;
      u8 *bottom;
+     u8 *top_right;
+     u8 *top_left;
 };
 
 typedef enum
