@@ -74,13 +74,13 @@ static void initScreens(u32 brightnessLevel, struct fb *fbs)
     *(vu32 *)0x1040045C = 0x00f00190;
     *(vu32 *)0x10400460 = 0x01c100d1;
     *(vu32 *)0x10400464 = 0x01920002;
-    *(vu32 *)0x10400468 = (u32)fbs[0].top_left;
-    *(vu32 *)0x1040046C = (u32)fbs[1].top_left;
+    *(vu32 *)0x10400468 = (u32)fbs[0].bottom;
+    *(vu32 *)0x1040046C = (u32)fbs[1].bottom;
     *(vu32 *)0x10400470 = 0x80341;
     *(vu32 *)0x10400474 = 0x00010501;
     *(vu32 *)0x10400478 = 0;
-    *(vu32 *)0x10400494 = (u32)fbs[0].top_right;
-    *(vu32 *)0x10400498 = (u32)fbs[1].top_right;
+    *(vu32 *)0x10400494 = (u32)fbs[0].bottom;
+    *(vu32 *)0x10400498 = (u32)fbs[1].bottom;
     *(vu32 *)0x10400490 = 0x000002D0;
     *(vu32 *)0x1040049C = 0x00000000;
 
@@ -134,12 +134,12 @@ static void setupFramebuffers(struct fb *fbs)
     *(vu32 *)0x10202204 = 0x01000000; //set LCD fill black to hide potential garbage -- NFIRM does it before firmlaunching
     *(vu32 *)0x10202A04 = 0x01000000;
 
-    *(vu32 *)0x10400468 = (u32)fbs[0].top_left;
-    *(vu32 *)0x1040046c = (u32)fbs[1].top_left;
-    *(vu32 *)0x10400494 = (u32)fbs[0].top_right;
-    *(vu32 *)0x10400498 = (u32)fbs[1].top_right;
-    *(vu32 *)0x10400568 = (u32)fbs[0].bottom;
-    *(vu32 *)0x1040056c = (u32)fbs[1].bottom;
+    *(vu32 *)0x10400468 = (u32)fbs[0].bottom;
+    *(vu32 *)0x1040046c = (u32)fbs[1].bottom;
+    *(vu32 *)0x10400494 = (u32)fbs[0].bottom;
+    *(vu32 *)0x10400498 = (u32)fbs[1].bottom;
+    *(vu32 *)0x10400568 = (u32)fbs[0].top_left;
+    *(vu32 *)0x1040056c = (u32)fbs[1].top_right;
 
     //Set framebuffer format, framebuffer select and stride
     *(vu32 *)0x10400470 = 0x80341;
