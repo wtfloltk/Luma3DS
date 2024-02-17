@@ -779,7 +779,7 @@ void patchCode(u64 progId, u16 progVer, u8 *code, u32 size, u32 textSize, u32 ro
 
         if(isN3DS)
         {
-            u32 cpuSetting = MULTICONFIG(NEWCPU);
+            u32 cpuSetting = 3 *  MULTICONFIG(NEWCPU);// == MULTICONFIG(NEWCPU)*((66*5)/110);
 
             if(cpuSetting != 0)
             {
